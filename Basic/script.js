@@ -42,3 +42,14 @@ window.onload = function() {
   };
 };
 
+
+// Basic Exercise 4 | Upper Case
+
+function UpperCase(x) {
+  Input_String = x.split(" ");
+  
+  console.log(Input_String); 
+
+  Input_String.forEach()
+
+}
