@@ -41,3 +41,28 @@ function avgPoints(classArray) {
   }
 }
 avgPoints(classroom);
+
+// Intermediate Exercise 2 | FizzBuzz
+numbers = ""; 
+numbers = Array.from(new Array(100), (x,i) => i + 1); 
+
+res = []; 
+function FizzBuzz(a) {
+  a.forEach(function(e){
+   
+    if ((e % 3 == 0) && (e % 5 == 0)) {
+    res.push(e = 'Fizzbuzz')
+    } else if (e % 5 == 0) {
+    res.push(e = 'Buzz')
+    } else if (e % 3 == 0) {
+    res.push(e = 'Fizz')
+    } else {
+      res.push(e) 
+    }
+     })
+    res.forEach(function(e) {
+    document.getElementById("Fizzbuzz").innerHTML += "<p>" + e + "<br></p>" 
+})
+}
+
+
