@@ -42,13 +42,14 @@ document.getElementById("button1").onclick = function arrayInput() {
 };
 // Basic Exercise 4 | Upper Case
 inputString = null;
-
-function UpperCase(x) {
-  inputString = x.split(" ");
+document.getElementById("button2").onclick = function UpperCase() {
+  inputString = document.getElementById("string").value; 
+  inputString = inputString.split(" ");
   outputString = [];
   inputString.forEach(function(e) {
     outputString.push((e = e.charAt(0).toUpperCase() + e.substring(1)));
   });
-  return outputString.join(" ");
+  var output = outputString.join(" ");
+  document.getElementById("capitalstring").innerHTML = "<p>" + output + "</p>";
 }
 
