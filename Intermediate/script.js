@@ -43,26 +43,41 @@ function avgPoints(classArray) {
 avgPoints(classroom);
 
 // Intermediate Exercise 2 | FizzBuzz
-numbers = ""; 
-numbers = Array.from(new Array(100), (x,i) => i + 1); 
+numbers = "";
+numbers = Array.from(new Array(100), (x, i) => i + 1);
 
-res = []; 
+res = [];
 function FizzBuzz(a) {
-  a.forEach(function(e){
-   
-    if ((e % 3 == 0) && (e % 5 == 0)) {
-    res.push(e = 'Fizzbuzz')
+  a.forEach(function(e) {
+    if (e % 3 == 0 && e % 5 == 0) {
+      res.push((e = "Fizzbuzz"));
     } else if (e % 5 == 0) {
-    res.push(e = 'Buzz')
+      res.push((e = "Buzz"));
     } else if (e % 3 == 0) {
-    res.push(e = 'Fizz')
+      res.push((e = "Fizz"));
     } else {
-      res.push(e) 
+      res.push(e);
     }
-     })
-    res.forEach(function(e) {
-    document.getElementById("Fizzbuzz").innerHTML += "<p>" + e + "<br></p>" 
-})
+  });
+  res.forEach(function(e) {
+    document.getElementById("Fizzbuzz").innerHTML += "<p>" + e + "<br></p>";
+  });
 }
 
+FizzBuzz(numbers);
 
+// Intermediate Exercise 3 | Array Items
+input_array = [];
+document.getElementById("button1").onclick = function arrayInput() {
+  input = document.getElementById("arrayitems").value;
+  input_array.push(input);
+  alert("Item has been added");
+};
+
+document.getElementById("button2").onclick = function() {
+  input_array.forEach(function(e) {
+    document.getElementById(
+      "display"
+    ).innerHTML += `<p>Element ${input_array.indexOf(e)} = ${e} </p>`;
+  });
+};
